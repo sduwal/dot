@@ -7,7 +7,8 @@
     "gtk-layer-shell": true,
     "height": 0,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/updates"
     ],
     "modules-center": [
         "clock"
@@ -149,5 +150,13 @@
         "tooltip-format-disconnected": "Disconnected",
         "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2
+    },
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/arch-updates.sh",
+        "interval": 3600, // Check for updates every hour (3600 seconds)
+        "tooltip-format": "{} Updates Available",
+        "tooltip": false,
+        "on-click": "kitty --hold paru" // Optional: run update on click
     }
 }
