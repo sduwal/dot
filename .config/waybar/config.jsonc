@@ -157,6 +157,6 @@
         "interval": 3600, // Check for updates every hour (3600 seconds)
         "tooltip-format": "{} Updates Available",
         "tooltip": false,
-        "on-click": "kitty --hold paru" // Optional: run update on click
+        "on-click": "kitty --title 'System Update' sh -c 'paru && read -n 1 -s -r -p \"Press any key to exit...\"'"
     }
 }

@@ -122,10 +122,14 @@ window#waybar {
     margin-right: 10px;
 }
 
-
 #custom-updates {
     background: #1e1e2e;
-    margin-left: 10px;
     border-radius: 10px;
+    margin-left: 5px;
     padding: 0px 10px;
+}
+
+#custom-updates:hover {
+    background: #cdd6f4;
+    color: #11111b;
 }
