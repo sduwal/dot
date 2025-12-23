@@ -1,7 +1,9 @@
 {
     "closeOnFocusLoss": false,
-    "faviconService": "twenty",
+    "considerPreedit": false,
+    "faviconService": "google",
     "font": {
+        "normal": "0xProto Nerd Font Mono",
         "size": 10.5
     },
     "keybinding": "default",
@@ -9,10 +11,10 @@
     },
     "popToRootOnClose": true,
     "rootSearch": {
-        "searchFiles": false
+        "searchFiles": true
     },
     "theme": {
-        "name": "rose-pine-moon"
+        "name": "gruvbox-dark"
     },
     "window": {
         "csd": true,
