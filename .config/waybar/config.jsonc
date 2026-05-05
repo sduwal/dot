@@ -152,11 +152,12 @@
         "interval": 2
     },
     "custom/updates": {
-        "format": "{}",
+        "format": "󰚰 {}",
+        "return-type": "json",
         "exec": "~/.config/waybar/scripts/arch-updates.sh",
         "interval": 3600, // Check for updates every hour (3600 seconds)
         "tooltip-format": "{} Updates Available",
-        "tooltip": false,
+        "tooltip": true,
         "on-click": "kitty --title 'System Update' sh -c 'paru && read -n 1 -s -r -p \"Press any key to exit...\"'"
     }
 }

@@ -19,3 +19,8 @@ eval "$(starship init bash)"
 
 export PATH="$PATH:/home/sduwal/SDK/flutter/bin"
 export PATH="$PATH:/home/sduwal/Android/Sdk/platform-tools"
+
+# Java Environment Configurations
+export JAVA_HOME=/opt/android-studio/jbr
+export PATH=$JAVA_HOME/bin:$PATH
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
