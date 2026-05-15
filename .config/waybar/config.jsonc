@@ -5,24 +5,30 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 0,
+    "height": 34,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
     "modules-left": [
-        "hyprland/workspaces",
-        "custom/updates"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
         "tray",
+        "custom/updates",
         "memory",
-        "cpu",
-        "network",
         "battery",
-        "backlight",
-        "pulseaudio",
-        "pulseaudio#microphone"
+        "custom/sidebar_toggle"
     ],
+    "custom/sidebar_toggle": {
+        "format": "󰇙",
+        "on-click": "~/.config/waybar/scripts/toggle_sidebar.sh",
+        "tooltip": true,
+        "tooltip-format": "Toggle System Side Pane"
+    },
     "hyprland/window": {
         "format": "󰣇 {}"
     },
@@ -123,7 +129,8 @@
         "format-alt": "󰾆 {percentage}%",
         "max-length": 10,
         "tooltip": true,
-        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB",
+        "on-click": "kitty -e top"
     },
     "cpu": {
         "interval": 10,
@@ -155,7 +162,7 @@
         "format": "󰚰 {}",
         "return-type": "json",
         "exec": "~/.config/waybar/scripts/arch-updates.sh",
-        "interval": 3600, // Check for updates every hour (3600 seconds)
+        "interval": 300, // Check for updates every 5 minutes (300 seconds)
         "tooltip-format": "{} Updates Available",
         "tooltip": true,
         "on-click": "kitty --title 'System Update' sh -c 'paru && read -n 1 -s -r -p \"Press any key to exit...\"'"

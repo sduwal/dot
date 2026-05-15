@@ -1,37 +1,30 @@
 {
-    "label" : "exit",
-    "action" : "",
-    "text" : "Exit",
-    "keybind" : "h"
-}
-{
-    "label" : "shutdown",
-    "action" : "systemctl poweroff",
-    "text" : "Shutdown",
-    "keybind" : "s"
-}
-
-{
-    "label" : "suspend",
-    "action" : "systemctl suspend-then-hibernate",
-    "text" : "Suspend",
-    "keybind" : "u"
-}
-{
     "label" : "lock",
     "action" : "hyprlock",
-    "text" : "Lock",
+    "text" : "",
     "keybind" : "l"
 }
 {
     "label" : "logout",
     "action" : "hyprctl dispatch exit",
-    "text" : "Logout",
+    "text" : "󰍃",
     "keybind" : "e"
+}
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend-then-hibernate",
+    "text" : "󰒲",
+    "keybind" : "u"
 }
 {
     "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "Reboot",
+    "text" : "󰜉",
     "keybind" : "r"
+}
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "󰐥",
+    "keybind" : "s"
 }
