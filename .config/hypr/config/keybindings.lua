@@ -87,8 +87,8 @@ hl.bind("SUPER + Print",       hl.dsp.exec_cmd("grimblast --notify copysave acti
 hl.bind("Print",               hl.dsp.exec_cmd("grimblast --notify copysave area"))
 
 -- Volume and Media Control
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -i 5"),                   { repeating = true, locked = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pamixer -d 5"),                   { repeating = true, locked = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -u -i 5"),                 { repeating = true, locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pamixer -u -d 5"),                 { repeating = true, locked = true })
 hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("pamixer --default-source -m"),    { locked = true })
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("pamixer -t"),                     { locked = true })
 hl.bind("XF86AudioPlay",        hl.dsp.exec_cmd("playerctl play-pause"),           { locked = true })

@@ -29,4 +29,7 @@ hl.on("hyprland.start", function()
 
     -- Workspace manager
     hl.exec_cmd("python3 ~/.config/hypr/scripts/workspace_manager.py")
+
+    -- SwayNC volume sync
+    hl.exec_cmd("~/.config/swaync/scripts/volume_control.sh --watch")
 end)

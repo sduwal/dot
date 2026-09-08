@@ -70,12 +70,13 @@ window#waybar {
     font-weight: bold;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: #a6e3a1;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
+    background-color: #b6083a;
     color: #1e1e2e;
 }
 

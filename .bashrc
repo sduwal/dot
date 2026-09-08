@@ -7,7 +7,6 @@
 
 alias grep='grep --color=auto'
 alias ls='ls_extended'
-alias rm='trash'
 alias cat='bat --theme=ansi'
 alias l='ls_extended'
 alias top='btm'
@@ -24,3 +23,7 @@ export PATH="$PATH:/home/sduwal/Android/Sdk/platform-tools"
 export JAVA_HOME=/opt/android-studio/jbr
 export PATH=$JAVA_HOME/bin:$PATH
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/sduwal/.local/bin:$PATH"
