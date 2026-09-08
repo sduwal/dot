@@ -1,48 +1,87 @@
 * {
-    font-family: "Outfit", "JetBrainsMono Nerd Font", sans-serif;
-    font-weight: 700;
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+    background-image: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 window {
-    background-color: rgba(17, 17, 27, 0.2);
-    backdrop-filter: blur(15px);
+    background-color: rgba(17, 17, 27, 0.55);
 }
 
-/* Group buttons in the center */
+/* Center card container */
 grid {
-    margin: 30vh 25vw;
+    margin: 40vh 22vw;
+    background-color: rgba(30, 30, 46, 0.75);
+    border: 1px solid rgba(138, 173, 244, 0.2);
+    border-radius: 20px;
+    padding: 18px 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
 }
 
 button {
-    background-color: rgba(30, 30, 46, 0.6);
+    font-size: 15px;
+    font-weight: 600;
     color: #cad3f5;
-    border-radius: 1000px; /* Circular buttons like Android */
-    border: 2px solid rgba(255, 255, 255, 0.05);
-    margin: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    font-size: 56px; 
-    min-width: 140px;
-    min-height: 140px;
-    background-image: none;
+    background-color: rgba(24, 24, 37, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    margin: 6px 8px;
+    padding: 14px 20px;
+    min-width: 120px;
+    min-height: 48px;
+    box-shadow: none;
+}
+
+button:focus {
+    box-shadow: none;
+    outline-style: none;
 }
 
 button:hover {
-    background-color: rgba(138, 173, 244, 0.2);
-    border-color: #8aadf4;
+    background-color: rgba(138, 173, 244, 0.15);
     color: #8aadf4;
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(138, 173, 244, 0.3);
+    border-color: rgba(138, 173, 244, 0.4);
+    box-shadow: 0 4px 16px rgba(138, 173, 244, 0.2);
 }
 
 button:active {
     background-color: #8aadf4;
-    color: #1e1e2e;
+    color: #181825;
 }
 
-/* Hover colors for icons */
-#lock:hover { color: #b7bdf8; border-color: #b7bdf8; }
-#logout:hover { color: #f5bde6; border-color: #f5bde6; }
-#suspend:hover { color: #8aadf4; border-color: #8aadf4; }
-#reboot:hover { color: #a6da95; border-color: #a6da95; }
-#shutdown:hover { color: #ed8796; border-color: #ed8796; }
+/* Specific button accent highlights on hover */
+#lock:hover {
+    color: #b7bdf8;
+    border-color: rgba(183, 189, 248, 0.5);
+    background-color: rgba(183, 189, 248, 0.15);
+    box-shadow: 0 4px 16px rgba(183, 189, 248, 0.25);
+}
+
+#logout:hover {
+    color: #f5bde6;
+    border-color: rgba(245, 189, 230, 0.5);
+    background-color: rgba(245, 189, 230, 0.15);
+    box-shadow: 0 4px 16px rgba(245, 189, 230, 0.25);
+}
+
+#suspend:hover {
+    color: #8aadf4;
+    border-color: rgba(138, 173, 244, 0.5);
+    background-color: rgba(138, 173, 244, 0.15);
+    box-shadow: 0 4px 16px rgba(138, 173, 244, 0.25);
+}
+
+#reboot:hover {
+    color: #eed49f;
+    border-color: rgba(238, 212, 159, 0.5);
+    background-color: rgba(238, 212, 159, 0.15);
+    box-shadow: 0 4px 16px rgba(238, 212, 159, 0.25);
+}
+
+#shutdown:hover {
+    color: #ed8796;
+    border-color: rgba(237, 135, 150, 0.5);
+    background-color: rgba(237, 135, 150, 0.15);
+    box-shadow: 0 4px 16px rgba(237, 135, 150, 0.25);
+}
+

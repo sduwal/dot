@@ -1,0 +1,138 @@
+/**
+ * Clean Frosted Glass Power Dialog for Hyprland
+ * Fullscreen Wayland layer-shell window with centered card
+ * Clicking empty space dismisses cleanly!
+ */
+
+configuration {
+    show-icons:     false;
+    click-to-exit:  true;
+}
+
+* {
+    font:              "JetBrainsMono Nerd Font 13";
+    bg-sheet:          rgba(24, 25, 38, 0.90);
+    bg-selected:       rgba(138, 173, 244, 0.28);
+    
+    fg-primary:        #cad3f5;
+    fg-secondary:      rgba(165, 173, 203, 0.75);
+    
+    accent:            #8aadf4;
+    border-subtle:     rgba(255, 255, 255, 0.12);
+    border-separator:  rgba(255, 255, 255, 0.08);
+}
+
+/* Fullscreen layer to capture clicks everywhere on screen */
+window {
+    transparency:      "real";
+    fullscreen:        true;
+    padding:           26% 36%;
+    background-color:  rgba(0, 0, 0, 0.25);
+    cursor:            "default";
+}
+
+/* Centered card */
+mainbox {
+    enabled:           true;
+    spacing:           0px;
+    padding:           24px 22px 20px 22px;
+    border:            1px;
+    border-color:      @border-subtle;
+    border-radius:     24px;
+    background-color:  @bg-sheet;
+    children:          [ "inputbar", "message", "listview" ];
+}
+
+/* Header bar */
+inputbar {
+    enabled:           true;
+    spacing:           0px;
+    margin:            0px 0px 4px 0px;
+    padding:           0px 0px 14px 0px;
+    background-color:  transparent;
+    border:            0px 0px 1px 0px;
+    border-color:      @border-separator;
+    children:          [ "prompt" ];
+}
+
+prompt {
+    enabled:           true;
+    font:              "JetBrainsMono Nerd Font Bold 14";
+    text-color:        @fg-primary;
+    background-color:  transparent;
+    vertical-align:    0.5;
+    horizontal-align:  0.0;
+}
+
+/* System Subtext / Uptime */
+message {
+    enabled:           true;
+    margin:            10px 0px 12px 0px;
+    padding:           0px;
+    background-color:  transparent;
+    border:            0;
+}
+
+textbox {
+    font:              "JetBrainsMono Nerd Font 11";
+    text-color:        @fg-secondary;
+    background-color:  transparent;
+    vertical-align:    0.5;
+    horizontal-align:  0.0;
+}
+
+/* Action List */
+listview {
+    enabled:           true;
+    columns:           1;
+    lines:             6;
+    cycle:             true;
+    dynamic:           true;
+    scrollbar:         false;
+    layout:            vertical;
+    reverse:           false;
+    fixed-height:      false;
+    spacing:           4px;
+    margin:            4px 0px 0px 0px;
+    padding:           0px;
+    background-color:  transparent;
+    cursor:            "default";
+}
+
+element {
+    enabled:           true;
+    padding:           10px 14px;
+    border-radius:     12px;
+    background-color:  transparent;
+    text-color:        @fg-primary;
+    cursor:            pointer;
+    orientation:       horizontal;
+    spacing:           12px;
+    border:            1px;
+    border-color:      transparent;
+}
+
+element normal.normal {
+    background-color:  transparent;
+    text-color:        @fg-primary;
+}
+
+element alternate.normal {
+    background-color:  transparent;
+    text-color:        @fg-primary;
+}
+
+element selected.normal {
+    background-color:  @bg-selected;
+    text-color:        #ffffff;
+    border-color:      rgba(138, 173, 244, 0.40);
+}
+
+element-text {
+    font:              "JetBrainsMono Nerd Font 13";
+    background-color:  transparent;
+    text-color:        inherit;
+    cursor:            inherit;
+    vertical-align:    0.5;
+    horizontal-align:  0.0;
+}

@@ -45,6 +45,10 @@ hl.window_rule({ match = { class = "org.freedesktop.impl.portal.desktop.hyprland
 
 -- Layer rules
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true, ignore_alpha = 0.5 })
+hl.layer_rule({ match = { namespace = "rofi" }, blur = true, ignore_alpha = 0 })
+hl.layer_rule({ match = { namespace = "rofi" }, animation = "fade" })
+hl.layer_rule({ match = { namespace = "wlogout" }, blur = true, ignore_alpha = 0 })
+hl.layer_rule({ match = { namespace = "wlogout" }, animation = "fade" })
 hl.layer_rule({ match = { namespace = "swaync-control-center" }, animation = "slide right" })
 hl.layer_rule({ match = { namespace = "swaync-notification-window" }, animation = "slide" })
 hl.layer_rule({ match = { namespace = "tofi" }, blur = true, ignore_alpha = 0 })

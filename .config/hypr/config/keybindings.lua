@@ -75,7 +75,7 @@ hl.bind("SUPER + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-colum
 
 -- Lock screen & Logout menu
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("wlogout"))
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/scripts/powermenu.sh"))
 
 -- Waybar & Sidebar
 hl.bind("CTRL + ESCAPE", hl.dsp.exec_cmd("killall waybar || waybar"))
